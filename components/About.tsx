@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export interface About {}
 
-const About: React.FC<IMe> = () => {
+const About: React.FC<IAbout> = () => {
   return (
     <section className="section dark:bg-secondary" id="about">
       <div className="container mx-auto">
