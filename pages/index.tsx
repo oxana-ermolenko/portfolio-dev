@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 import Skills from "@/components/brands/Skills";
 import About from "@/components/About";
 import Portfolio from "@/components/work/Portfolio";
+import Contact from "@/components/Contact";
 
 
 const Home: NextPageWithLayout = () => {
@@ -13,6 +14,7 @@ const Home: NextPageWithLayout = () => {
       <Skills />
       <About />
       <Portfolio />
+      <Contact />
     </>
   );
 };
