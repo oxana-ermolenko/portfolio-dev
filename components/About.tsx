@@ -1,7 +1,7 @@
 import Img from "../public/img/about.png";
 import Image from "next/image";
 
-export interface About {}
+export interface IAbout {}
 
 const About: React.FC<IAbout> = () => {
   return (
