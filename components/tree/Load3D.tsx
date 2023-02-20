@@ -1,17 +1,28 @@
 import { useRef, useEffect } from "react";
-import { useAnimations, useGLTF } from "@react-three/drei";
+import { Gltf, useAnimations, useGLTF } from "@react-three/drei";
+//import { GLTF } from "three-stdlib";
+import { GLTF } from "three/examples/jsm/loaders/GLTFLoader";
 
 export interface ILoad3D {
   position: number[];
 }
 
+interface GLTFResult extends GLTF  {
+  nodes: any;
+  materials: { SpacePirate_M: THREE.MeshStandardMaterial };
+  animations: any;
+};
+// declare module "three" {
+//   interface GLTF {
+//     nodes: any;
+//   }
+// }
+
 const Load3D: React.FC<ILoad3D> = ({ position }) => {
-  const group = useRef();
-  const { nodes, materials, animations } = useGLTF("/guru.glb");
+  const group = useRef<THREE.Group>();
+  const { nodes, materials, animations } = useGLTF("/guru.glb") as GLTFResult;
   const { actions } = useAnimations(animations, group);
   useEffect(() => {
-    console.log(nodes);
-    //actions.Armature|mixamo.com.play();
     actions.run.play();
   });
   return (

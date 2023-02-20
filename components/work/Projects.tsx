@@ -2,8 +2,17 @@ import { useState, useEffect } from "react";
 import { projectsData } from "@/lib/common/data";
 import { projectsNav } from "@/lib/common/data";
 import Project from "./Project";
+//import {Work} from '@/interfaces'
 
-export interface IProjects {}
+export interface IProjects {
+  
+}
+// export interface IWork  {
+//   id: string;
+//   image: string;
+//   name: string;
+//   category: string;
+// };
 
 const Projects: React.FC<IProjects> = () => {
   const [item, setItem] = useState({ name: "all" });

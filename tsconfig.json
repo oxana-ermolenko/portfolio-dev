@@ -19,6 +19,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "three.d.ts", "**/*.ts", "**/*.tsx", "lib/common/data.js"],
   "exclude": ["node_modules"]
 }

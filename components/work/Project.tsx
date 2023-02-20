@@ -1,6 +1,11 @@
 import Image from "next/image";
 export interface IProject {
-  item: any;
+  item: {
+    id: string;
+    image: string;
+    name: string;
+    category: string;
+  };
 }
 
 const Project: React.FC<IProject> = ({ item }) => {
