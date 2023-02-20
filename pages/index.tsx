@@ -3,7 +3,7 @@ import { NextPageWithLayout } from "./page";
 import Hero from "@/components/Hero";
 import Skills from "@/components/brands/Skills";
 import About from "@/components/About";
-import Portfolio from "@/components/work/Portfolio";
+// import Portfolio from "@/components/work/Portfolio";
 import Contact from "@/components/Contact";
 
 
@@ -13,7 +13,7 @@ const Home: NextPageWithLayout = () => {
       <Hero />
       <Skills />
       <About />
-      <Portfolio />
+      {/* <Portfolio /> */}
       <Contact />
     </>
   );
